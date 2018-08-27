@@ -2,15 +2,17 @@
   <div id="app">
     <h1>Nixie Tube Clock</h1>
     <Clock />
+    <Details />
   </div>
 </template>
 
 <script>
 import Clock from './components/Clock';
+import Details from './components/Details';
 export default {
   name: 'App',
   components: {
-    Clock
+    Clock, Details
   }
 }
 </script>

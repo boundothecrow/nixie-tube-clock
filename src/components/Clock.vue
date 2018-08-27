@@ -63,6 +63,9 @@ export default {
     },
     created: function() {
         this.startTime()
+    },
+    destoryed: function() {
+        clearInterval(this.startTime());
     }
 }
 </script>
@@ -94,7 +97,6 @@ export default {
 }
 
 .cathode {
-    width: 1em;
     text-align: center;
     user-select: none;
     -ms-user-select: none;
@@ -103,43 +105,25 @@ export default {
 }
 
 /* For z-indexing: order goes 6 7 5 8 4 3 9 2 0 1 */
-.d6 {
-    z-index: 999;
-}
-.d7 {
-    z-index: 998;
-}
-.d5 {
-    z-index: 997;
-}
-.d8 {
-    z-index: 996;
-}
-.d4 {
-    z-index: 995;
-}
-.d3 {
-    z-index: 994;
-}
-.d9 {
-    z-index: 993;
-}
-.d2 {
-    z-index: 992;
-}
-.d0 {
-    z-index: 991;
-}
-.d1 {
-    z-index: 990;
-}
+.d6 { z-index: 999; }
+.d7 { z-index: 998; }
+.d5 { z-index: 997; }
+.d8 { z-index: 996; }
+.d4 { z-index: 995; }
+.d3 { z-index: 994; }
+.d9 { z-index: 993; }
+.d2 { z-index: 992; }
+.d0 { z-index: 991; }
+.d1 { z-index: 990; }
 
 /* When the digit is illuminated */
 .active {
     color: orange;
     opacity: 1;
-    text-shadow: 0 0 1px orange, 0 0 3px orange, 0 0 12px red; 
+    text-shadow: 0 0 1px orange, 0 0 3px orange, 0 0 6px red, 0 0 9px red; 
 }
 
-
+@media screen and (max-width: 720px) {
+    #clock { font-size: 2em; }
+}
 </style>
